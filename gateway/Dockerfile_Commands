@@ -1,0 +1,5 @@
+COPY ./target/ /arrowhead/gateway/
+COPY ./config/ /arrowhead/gateway/config/
+WORKDIR /arrowhead/gateway
+#ENTRYPOINT ["java", "--add-modules", "java.xml.bind", "-cp", "lib/*:*", "-jar", "gateway-4.0.jar", "-d", "-daemon", "> insecure_gateway.log &"]
+ENTRYPOINT ["java", "-cp", "lib/*:*", "-jar", "gateway-4.0.jar", "-d", "-daemon" ]

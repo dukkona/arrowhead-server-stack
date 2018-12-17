@@ -1,0 +1,5 @@
+COPY ./target/ /arrowhead/gatekeeper/
+COPY ./config/ /arrowhead/gatekeeper/config/
+WORKDIR /arrowhead/gatekeeper
+#ENTRYPOINT ["java", "--add-modules", "java.xml.bind", "-cp", "lib/*:*", "-jar", "gatekeeper-4.0.jar", "-d", "-daemon", "> insecure_gk.log &"]
+ENTRYPOINT ["java", "-cp", "lib/*:*", "-jar", "gatekeeper-4.0.jar", "-d", "-daemon" ]

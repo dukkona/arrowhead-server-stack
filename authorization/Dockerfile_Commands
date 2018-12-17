@@ -1,0 +1,5 @@
+COPY ./target/ /arrowhead/authorization/
+COPY ./config/ /arrowhead/authorization/config/
+WORKDIR /arrowhead/authorization
+#ENTRYPOINT ["java", "--add-modules", "java.xml.bind", "-cp", "lib/*:*", "-jar", "authorization-4.0.jar", "-d", "-daemon", " > insecure_auth.log &"]
+ENTRYPOINT ["java", "-cp", "lib/*:*", "-jar", "authorization-4.0.jar", "-d", "-daemon" ]

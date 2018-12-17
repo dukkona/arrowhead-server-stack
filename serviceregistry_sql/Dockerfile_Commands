@@ -1,0 +1,5 @@
+COPY ./target/ /arrowhead/serviceregistry_sql/
+COPY ./config/ /arrowhead/serviceregistry_sql/config/
+WORKDIR /arrowhead/serviceregistry_sql
+# ENTRYPOINT ["java", "--add-modules", "java.xml.bind", "-cp", "lib/*:*", "-jar", "serviceregistry_sql-4.0.jar", "-d", "-daemon", "> insecure_sr.log &"]
+ENTRYPOINT ["java", "-cp", "lib/*:*", "-jar", "serviceregistry_sql-4.0.jar", "-d", "-daemon" ]

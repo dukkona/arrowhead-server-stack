@@ -1,0 +1,9 @@
+export SERVICE=web-server-test
+export IMAGE=registry.portus.my:5000/user1/my-web-server-test:1.0
+export PUBLISHED_PORT=19771
+export TARGET_PORT=80
+export USER=user1
+export PASS=20testa18
+export REGISTRY=https://registry.portus.my:5000
+export DOCKER_HOST=node1.docker:2376
+export DOCKER_TLS_VERIFY=1

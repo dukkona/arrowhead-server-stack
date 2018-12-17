@@ -1,0 +1,5 @@
+COPY ./target/ /arrowhead/orchestrator/
+COPY ./config/ /arrowhead/orchestrator/config/
+WORKDIR /arrowhead/orchestrator
+#ENTRYPOINT ["java", "--add-modules", "java.xml.bind", "-cp", "lib/*:*", "-jar", "orchestrator-4.0.jar", "-d", "-daemon", "> insecure_orch.log &"]
+ENTRYPOINT ["java", "-cp", "lib/*:*", "-jar", "orchestrator-4.0.jar", "-d", "-daemon" ]

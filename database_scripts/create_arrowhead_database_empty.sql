@@ -1,0 +1,1 @@
+CREATE DATABASE  IF NOT EXISTS `arrowhead_test_cloud_1` /*!40100 DEFAULT CHARACTER SET utf8 */;
